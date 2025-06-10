@@ -1,7 +1,6 @@
-package td.decoupage.virtuals_threads.tp3;
+package td.virtuals_threads.tp3;
 
-import td.decoupage.virtuals_threads.services.IArgumentsJVM;
-import td.decoupage.virtuals_threads.services.ImplVariablesArgumentsJVM;
+import td.virtuals_threads.tp1.SimpleThreadEstimation;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;

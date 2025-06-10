@@ -1,4 +1,4 @@
-package td.decoupage.virtuals_threads.services;
+package td.virtuals_threads.services;
 
 // Type de thread	Taille stack (par défaut)	Contrôle via -Xss	Mémoire réservée	Croissance dynamique
 // Thread classique	~1 Mo (ou plus selon -Xss)	✅ Oui	Allouée dès le début	❌ Non (taille fixe)

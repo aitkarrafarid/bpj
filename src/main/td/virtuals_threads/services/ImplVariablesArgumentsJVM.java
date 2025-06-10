@@ -1,15 +1,15 @@
-package td.decoupage.virtuals_threads.tp1;
+package td.virtuals_threads.services;
 
 import java.lang.management.ManagementFactory;
 import java.lang.management.RuntimeMXBean;
 import java.util.List;
 
-public class ArgumentsJVM {
-    //    public static void main(String[] args) {
-    private long xss = 1024 * 1024; // Taille de pile typique (~1 Mo)
-    private String unite;
+// -Xmx16m -Xss2m
+public class ImplVariablesArgumentsJVM implements IArgumentsJVM {
 
+    @Override
     public long getXssJvmArgs() {
+        long xss = 1024 * 1024; // Taille de pile typique (~1 Mo)
         // Cherche Xss dans les arguments JVM
         RuntimeMXBean runtimeMxBean = ManagementFactory.getRuntimeMXBean();
         List<String> jvmArgs = runtimeMxBean.getInputArguments();
@@ -18,7 +18,7 @@ public class ArgumentsJVM {
         for (String arg : jvmArgs) {
             if (arg.startsWith("-Xss")) {
                 xssValue = arg.substring(4);
-                unite = xssValue.substring(xssValue.length() - 1);
+                String unite = xssValue.substring(xssValue.length() - 1);
                 xssValue = arg.replaceAll("\\D", ""); // Supprime tout ce qui n'est pas un chiffre
                 switch (unite) {
                     case "k":
@@ -37,21 +37,5 @@ public class ArgumentsJVM {
             }
         }
         return xss;
-    }
-//    }
-    public long getXss() {
-        return xss;
-    }
-
-    public void setXss(long xss) {
-        this.xss = xss;
-    }
-
-    public String getUnite() {
-        return unite;
-    }
-
-    public void setUnite(String unite) {
-        this.unite = unite;
     }
 }

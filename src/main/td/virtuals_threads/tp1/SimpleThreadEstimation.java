@@ -1,14 +1,18 @@
-package td.decoupage.td.decoupage.virtuals_threads;
+package td.virtuals_threads.tp1;
 
 import com.sun.management.OperatingSystemMXBean;
-import td.decoupage.virtuals_threads.services.IArgumentsJVM;
-import td.decoupage.virtuals_threads.services.ImplVariablesArgumentsJVM;
+import td.virtuals_threads.services.IArgumentsJVM;
+import td.virtuals_threads.services.ImplVariablesArgumentsJVM;
 
 import java.lang.management.ManagementFactory;
 
 public class SimpleThreadEstimation {
 
     public static void main(String[] args) {
+        SimpleThreadEstimation.getInfosJVM();
+    }
+
+    public static void getInfosJVM(){
         // Choisis l'implémentation ici
 //        IArgumentsJVM argumentsJVM = new ImplDefaultArgumentsJVM();
         // Exemple : -Xmx16m -Xss2m

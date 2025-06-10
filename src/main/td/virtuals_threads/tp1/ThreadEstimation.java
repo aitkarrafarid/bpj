@@ -1,4 +1,4 @@
-package td.decoupage.virtuals_threads.tp1;
+package td.virtuals_threads.tp1;
 
 import com.sun.management.OperatingSystemMXBean;
 

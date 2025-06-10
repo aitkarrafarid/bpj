@@ -1,4 +1,4 @@
-package td.decoupage.virtuals_threads.services;
+package td.virtuals_threads.services;
 
 public class ImplDefaultArgumentsJVM implements IArgumentsJVM {
 

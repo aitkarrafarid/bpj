@@ -1,10 +1,8 @@
-package td.decoupage.virtuals_threads.tp1;
+package td.virtuals_threads.tp1;
 
-public class SimpleVirtualThreadEstimation {
+public class VirtualThreadEstimation {
     public static void main(String[] args) {
         long maxMemory = Runtime.getRuntime().maxMemory(); // Mémoire max JVM en octets
-        // Elle est gérée par la JVM sur le tas (heap)
-        // Le paramètre -Xss qui définit la taille de pile pour les threads n’a pas d’effet sur les virtual threads
         long virtualThreadStackSize = 1024 * 10; // Hypothèse : 10 Ko par Virtual Thread
 
         long estimatedMaxVirtualThreads = maxMemory / virtualThreadStackSize;
