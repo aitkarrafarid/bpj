@@ -26,7 +26,7 @@ public class SimpleThreadEstimation {
 
         // OperatingSystemMXBean pour la mémoire physique utilisée par le processus JVM (total, incluant tous les segments)
         OperatingSystemMXBean osBean = (OperatingSystemMXBean) ManagementFactory.getOperatingSystemMXBean();
-        long jvmPhysicalMemory = osBean.getProcessCpuTime(); // à ne pas confondre, c'est CPU
+        long jvmPhysicalMemory = osBean.getProcessCpuTime(); // retourne le temps CPU utilisé
 
         // Pour la mémoire réelle utilisée par la JVM
         // JVM total memory : inclut heap + metaspace + thread stacks + buffers natifs, etc.
