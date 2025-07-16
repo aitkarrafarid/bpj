@@ -8,22 +8,22 @@ import java.util.concurrent.Executors;
 
 public class BenchmarkThread {
 
-    public static void main(String[] args) throws Exception {
-        int taskCount = 100;
-        int poolThreads = 128;
-//        Runtime runtime = Runtime.getRuntime();
-//        IArgumentsJVM argumentsJVM = new ImplVariablesArgumentsJVM();
-//        int poolThreads = (int) (runtime.maxMemory() / argumentsJVM.getXssJvmArgs());
-        System.out.println("Estimation du nombre de threads disponibles (hors VT) : " + poolThreads);
-        // Cette méthode crée un ExecutorService qui utilise un seul thread pour exécuter les tâches.
-        // Toutes les tâches soumises à ce pool de threads sont exécutées séquentiellement, une après l'autre, par ce seul thread.
-//        System.out.println("\n Thread classique :");
-//        lancerBenchmark(() -> Executors.newSingleThreadExecutor(), taskCount);
-        System.out.println("\n Thread classique - pool :");
-        lancerBenchmark(() -> Executors.newFixedThreadPool(poolThreads), taskCount);
-        System.out.println("\n Virtual Threads :");
-        lancerBenchmark(() -> Executors.newVirtualThreadPerTaskExecutor(), taskCount);
-    }
+//    public static void main(String[] args) throws Exception {
+//        int taskCount = 100;
+//        int poolThreads = 128;
+////        Runtime runtime = Runtime.getRuntime();
+////        IArgumentsJVM argumentsJVM = new ImplVariablesArgumentsJVM();
+////        int poolThreads = (int) (runtime.maxMemory() / argumentsJVM.getXssJvmArgs());
+//        System.out.println("Estimation du nombre de threads disponibles (hors VT) : " + poolThreads);
+//        // Cette méthode crée un ExecutorService qui utilise un seul thread pour exécuter les tâches.
+//        // Toutes les tâches soumises à ce pool de threads sont exécutées séquentiellement, une après l'autre, par ce seul thread.
+////        System.out.println("\n Thread classique :");
+////        lancerBenchmark(() -> Executors.newSingleThreadExecutor(), taskCount);
+//        System.out.println("\n Thread classique - pool :");
+//        lancerBenchmark(() -> Executors.newFixedThreadPool(poolThreads), taskCount);
+//        System.out.println("\n Virtual Threads :");
+//        lancerBenchmark(() -> Executors.newVirtualThreadPerTaskExecutor(), taskCount);
+//    }
     
     static void lancerBenchmark(Callable<ExecutorService> fournisseur, int nbTaches) throws Exception {
         System.gc(); // Nettoyage mémoire
