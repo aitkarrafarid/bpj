@@ -8,3 +8,4 @@ C:\Users\BKAUIB\Applications\java\OpenJDK21U-jdk_x64_windows_hotspot_21.0.3_9\jd
 -Xss2M
 
 https://visualvm.github.io/
+
