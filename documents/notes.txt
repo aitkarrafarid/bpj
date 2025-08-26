@@ -1,5 +1,7 @@
-https://app.wooclap.com/home
-Pour offre Education, rentrer dans "saisir un code" : K12
+https://app.wooclap.com/auth/login
+
+wooclap1.igpde@finances.gouv.fr
+PWD : voir keepass
 
 Liens : 
 https://collabdne-my.sharepoint.com/:p:/g/personal/erwan_garel_collaboratif-dne_fr/EePMthXXPltCszpWuRpVBDABW-uNSiOfjLKXoyZgBgqX6A?rtime=kqHdYnqj3Ug
