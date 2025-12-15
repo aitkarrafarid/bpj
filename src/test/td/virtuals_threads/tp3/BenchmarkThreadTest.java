@@ -36,9 +36,11 @@ public class BenchmarkThreadTest {
         int taskCount = myTaskCount;
         int poolThreads = 10000;
         System.out.println("\n Thread classique - pool :");
+        // Avec une lambda
         BenchmarkThread.lancerBenchmark(() -> Executors.newFixedThreadPool(poolThreads), taskCount);
 
         System.out.println("\n Virtual Threads :");
+        // Sans lambda
         Callable<ExecutorService> myExecutorCallable = new Callable<>() {
             @Override
             public ExecutorService call() {
@@ -46,7 +48,6 @@ public class BenchmarkThreadTest {
             }
         };
         BenchmarkThread.lancerBenchmark(myExecutorCallable, taskCount);
-//        Avec une lambda
-//        BenchmarkThread.lancerBenchmark(() -> Executors.newVirtualThreadPerTaskExecutor(), taskCount);
+        // BenchmarkThread.lancerBenchmark(() -> Executors.newVirtualThreadPerTaskExecutor(), taskCount);
     }
 }
